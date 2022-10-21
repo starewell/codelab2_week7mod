@@ -1,0 +1,4 @@
+repository "astar_exercise@CodeLab@cloud"
+  path "/"
+    br "/main"
+    co "/main"
