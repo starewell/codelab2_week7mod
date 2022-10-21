@@ -118,8 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842d5b1fe10374f06a734a6a8f1c5569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finished: 0
+  gameManager: {fileID: 0}
   astar: {fileID: 7173405287443762570}
+  lineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &7173405287443762571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +351,7 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
-  m_colorMode: 3
+  m_colorMode: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}

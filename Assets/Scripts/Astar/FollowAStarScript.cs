@@ -16,9 +16,6 @@ public class FollowAStarScript : MonoBehaviour {
 	protected int currentStep = 1;
 
 	protected float lerpPer = 0;
-	
-	protected float startTime;
-	protected float travelStartTime;
 
 	public Color lineColor; // new var
 	int lineIndex; // new var
@@ -46,7 +43,6 @@ public class FollowAStarScript : MonoBehaviour {
 	}
 	public virtual void StartMove(){
 		move = true;
-		travelStartTime = Time.realtimeSinceStartup;
 	}
 
 

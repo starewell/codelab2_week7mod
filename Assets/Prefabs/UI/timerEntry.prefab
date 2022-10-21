@@ -604,6 +604,12 @@ MonoBehaviour:
   timeText: {fileID: 165419760810304503}
   placeText: {fileID: 165419761222991458}
   princessText: {fileID: 165419759701351076}
+  princess: {fileID: 165419761114918464}
+  sprites:
+  - {fileID: 21300000, guid: 00162698c298f4cce978ff7b8d207bf9, type: 3}
+  - {fileID: 21300000, guid: 2cf090d74217f4ad0883b05013c48fa1, type: 3}
+  - {fileID: 21300000, guid: 3f2235b975abd4f1e8153a5760a1c8f9, type: 3}
+  - {fileID: 21300000, guid: 47960857eec9844869959a0b067e9f19, type: 3}
 --- !u!1 &165419761280093854
 GameObject:
   m_ObjectHideFlags: 0

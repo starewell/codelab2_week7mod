@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
     [Header("Game Management Vars")]
     [SerializeField] float timer;
     public List<TimerEntry> finishTimes = new List<TimerEntry>();
-    int payoutIndex;
+    [SerializeField] int payoutIndex;
     public bool top3Finished = false;
 
     private void Start() {
@@ -115,15 +115,9 @@ public class GameManager : MonoBehaviour {
             timers[finishTimes.Count].ToggleLog(true);
             timers[finishTimes.Count].UpdateTimeText(FormatTime(timer));
             timers[finishTimes.Count].UpdatePlaceText(place);
-            timers[finishTimes.Count].UpdatePrincessText(princess.princessNo.ToString());
+            timers[finishTimes.Count].UpdatePrincessText(princess.princessNo);
             finishTimes.Add(timers[finishTimes.Count]);           
         }  
-        
-        // Check after logging if all 4 finished
-        if (top3Finished) StartCoroutine(RaceFinished());
-        // Check after logging if top 3 finished
-        if (finishTimes.Count == 3) top3Finished = true;
-
 
         //Check after logging if this princess was bet on by the player
         if (princess.princessNo == betManager.choosenPrincess) { 
@@ -132,6 +126,12 @@ public class GameManager : MonoBehaviour {
             if (payoutIndex != 4)
                 betManager.payoutText[finishTimes.Count - 1].transform.parent.GetComponent<Image>().color = Color.green;
         }
+
+        // Check after logging if all 4 finished
+        if (top3Finished) StartCoroutine(RaceFinished());
+        // Check after logging if top 3 finished
+        if (finishTimes.Count == 3) top3Finished = true;
+
         statusText.text = "PRINCESS " + princess.princessNo + " PLACED " + place;      
     }
 

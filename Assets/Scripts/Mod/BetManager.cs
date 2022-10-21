@@ -43,6 +43,7 @@ public class BetManager : MonoBehaviour
         payoutText[2].transform.parent.GetComponent<Image>().color = Color.white;
     }
 
+    // Called from scene buttons
     // Append wager by value, calculate payout and update UI
     public void ChangeWager(int amount) {
         // Player has that much cash and wager is greater than 0
@@ -97,6 +98,7 @@ public class BetManager : MonoBehaviour
             
         } else if (index == 1) {
             betTitle.text = "BETS CLOSED.";
+            // Hide wager panels
             wagerPanel.SetActive(false);
             closeBetButton.SetActive(false);
             // Hide all princess buttons but choosenPrincess
